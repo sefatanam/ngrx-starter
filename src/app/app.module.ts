@@ -3,8 +3,9 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {StoreModule} from '@ngrx/store';
-import {counterReducer} from './store/reducers/counter.reducer';
-import { CounterComponent } from './counter/counter.component';
+import {CounterComponent} from './counter/counter.component';
+import {ShoppingReducer} from './store/reducers/shopping.reducer';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CounterComponent } from './counter/counter.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({count: counterReducer})
+    StoreModule.forRoot({shopping: ShoppingReducer}),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
