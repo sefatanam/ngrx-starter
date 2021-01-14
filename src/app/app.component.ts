@@ -3,7 +3,7 @@ import {Observable} from 'rxjs';
 import {IShoppingModel} from './store/models/interfaces/IShopping.model';
 import {Store} from '@ngrx/store';
 import {AppState} from './store/states/app-state.model';
-import {AddItemAction} from './store/actions/shopping.action';
+import {AddItemAction, DeleteItemAction} from './store/actions/shopping.action';
 
 @Component({
   selector: 'app-root',
@@ -30,4 +30,7 @@ export class AppComponent implements OnInit {
     this.newShoppingItem = {id: 0, name: ''};
   }
 
+  deleteItem(id: number): void {
+    this.store.dispatch(new DeleteItemAction(id));
+  }
 }

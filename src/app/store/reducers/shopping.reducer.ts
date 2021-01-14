@@ -10,6 +10,8 @@ export function ShoppingReducer(state: Array<IShoppingModel> = initialState, act
   switch (action.type) {
     case ShoppingActionType.ADD_ITEM:
       return [...state, action.payload];
+    case ShoppingActionType.DELETE_ITEM:
+      return state.filter(item => item.id !== action.payload);
     default :
       return state;
   }
