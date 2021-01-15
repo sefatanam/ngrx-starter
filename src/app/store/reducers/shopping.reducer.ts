@@ -5,10 +5,7 @@ import {ShoppingAction, ShoppingActionType} from '../actions/shopping.action';
 /*
  * initial value of shopping reducer
  */
-const initialState: Array<IShoppingModel> = [{
-  id: 0,
-  name: 'Diet Coke',
-}];
+const initialState: Array<IShoppingModel> = [];
 
 /**
  * Shopping Reducer
