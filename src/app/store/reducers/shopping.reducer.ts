@@ -1,11 +1,15 @@
-import {IShoppingModel} from '../models/interfaces/IShopping.model';
 import {ShoppingAction, ShoppingActionType} from '../actions/shopping.action';
+import {ShoppingState} from '../states/app/ShoppingState';
 
 
 /*
  * initial value of shopping reducer
  */
-const initialState: Array<IShoppingModel> = [];
+const initialState: ShoppingState = {
+  list: [],
+  loading: false,
+  error: undefined
+};
 
 /**
  * Shopping Reducer
@@ -14,12 +18,32 @@ const initialState: Array<IShoppingModel> = [];
  * @constructor
  */
 
-export function ShoppingReducer(state: Array<IShoppingModel> = initialState, action: ShoppingAction): IShoppingModel[] {
+export function ShoppingReducer(state: ShoppingState = initialState, action: ShoppingAction): ShoppingState {
   switch (action.type) {
+    case ShoppingActionType.LOAD_SHOPPING:
+      return {...state, loading: true};
+    case ShoppingActionType.LOAD_SHOPPING_SUCCESS:
+      return {...state, list: action.payload, loading: false};
+    case ShoppingActionType.LOAD_SHOPPING_FAILURE:
+      return {...state, error: action.payload, loading: false};
     case ShoppingActionType.ADD_ITEM:
-      return [...state, action.payload];
+      return {...state, loading: true};
+    case ShoppingActionType.ADD_ITEM_SUCCESS:
+      return {...state, list: [...state.list, action.payload], loading: false};
+    case ShoppingActionType.ADD_ITEM_FAILURE:
+      return {...state, error: action.payload, loading: false};
     case ShoppingActionType.DELETE_ITEM:
-      return state.filter(item => item.id !== action.payload);
+      return {...state, loading: true};
+    case ShoppingActionType.DELETE_ITEM_SUCCESS:
+      return {
+        ...state,
+        list: state.list.filter(item => item.id !== action.payload),
+        loading: false
+      };
+    case ShoppingActionType.DELETE_ITEM_FAILURE:
+      return {
+        ...state, loading: false, error: action.payload
+      };
     default :
       return state;
   }

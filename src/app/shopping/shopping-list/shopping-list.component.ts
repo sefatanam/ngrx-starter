@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
 import {IShoppingModel} from '../../store/models/interfaces/IShopping.model';
 import {Store} from '@ngrx/store';
-import {AppState} from '../../store/states/app-state.model';
+import {AppState} from '../../store/states/AppState';
 import {AddItemAction, DeleteItemAction} from '../../store/actions/shopping.action';
 
 @Component({

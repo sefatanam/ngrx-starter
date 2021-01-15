@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>CounterComponent</li>
+  <li>ShoppingListComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,16 +61,9 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/counter/counter.component.ts</code>
+    <code>src/app/shopping/shopping-list/shopping-list.component.ts</code>
 </p>
 
-    <p class="comment">
-        <h3>Description</h3>
-    </p>
-    <p class="comment">
-        <p>Counter Component</p>
-
-    </p>
 
 
     <p class="comment">
@@ -98,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-counter</code></td>
+                <td class="col-md-9"><code>app-shopping-list</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./counter.component.css</code></td>
+                <td class="col-md-9"><code>./shopping-list.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./counter.component.html</code></td>
+                <td class="col-md-9"><code>./shopping-list.component.html</code></td>
             </tr>
 
 
@@ -137,7 +130,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#count$">count$</a>
+                                <a href="#newShoppingItem">newShoppingItem</a>
+                            </li>
+                            <li>
+                                <a href="#shoppingItem$">shoppingItem$</a>
                             </li>
                         </ul>
                     </td>
@@ -152,13 +148,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#decrement">decrement</a>
+                                <a href="#addItem">addItem</a>
                             </li>
                             <li>
-                                <a href="#increment">increment</a>
+                                <a href="#deleteItem">deleteItem</a>
                             </li>
                             <li>
-                                <a href="#reset">reset</a>
+                                <a href="#ngOnInit">ngOnInit</a>
                             </li>
                         </ul>
                     </td>
@@ -178,12 +174,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(store: Store<literal type>)</code>
+<code>constructor(store: <a href="../interfaces/AppState.html">Store<AppState></a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/counter/counter.component.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shopping/shopping-list/shopping-list.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -204,7 +200,7 @@
                                                         <td>store</td>
                                                   
                                                         <td>
-                                                                    <code>Store&lt;literal type&gt;</code>
+                                                                        <code><a href="../interfaces/AppState.html" target="_self" >Store&lt;AppState&gt;</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -234,38 +230,63 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="decrement"></a>
+                    <a name="addItem"></a>
                     <span class="name">
                         <b>
-                            decrement
+                            addItem
                         </b>
-                        <a href="#decrement"><span class="icon ion-ios-link"></span></a>
+                        <a href="#addItem"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>decrement()</code>
+<code>addItem($event)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">src/app/counter/counter.component.ts:41</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/shopping/shopping-list/shopping-list.component.ts:26</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Decrement Counter Value to the store</p>
-</div>
 
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>$event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -275,38 +296,67 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="increment"></a>
+                    <a name="deleteItem"></a>
                     <span class="name">
                         <b>
-                            increment
+                            deleteItem
                         </b>
-                        <a href="#increment"><span class="icon ion-ios-link"></span></a>
+                        <a href="#deleteItem"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>increment()</code>
+<code>deleteItem(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/app/counter/counter.component.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/shopping/shopping-list/shopping-list.component.ts:33</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Incrementing Counter value to the store</p>
-</div>
 
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -316,34 +366,32 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="reset"></a>
+                    <a name="ngOnInit"></a>
                     <span class="name">
                         <b>
-                            reset
+                            ngOnInit
                         </b>
-                        <a href="#reset"><span class="icon ion-ios-link"></span></a>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>reset()</code>
+<code>ngOnInit()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/app/counter/counter.component.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/shopping/shopping-list/shopping-list.component.ts:22</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Resetting Counter value to the store</p>
-</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -363,23 +411,55 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="count$"></a>
+                        <a name="newShoppingItem"></a>
                         <span class="name">
                             <b>
-                            count$</b>
-                            <a href="#count$"><span class="icon ion-ios-link"></span></a>
+                            newShoppingItem</b>
+                            <a href="#newShoppingItem"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Observable&lt;number&gt;</code>
+                            <i>Type : </i>        <code><a href="../classes/IShoppingModel.html" target="_self" >IShoppingModel</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{id: 0, name: &#x27;&#x27;}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shopping/shopping-list/shopping-list.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shoppingItem$"></a>
+                        <span class="name">
+                            <b>
+                            shoppingItem$</b>
+                            <a href="#shoppingItem$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/IShoppingModel.html" target="_self" >Observable&lt;Array&lt;IShoppingModel&gt;&gt;</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/counter/counter.component.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/shopping/shopping-list/shopping-list.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -392,73 +472,133 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import {Observable} from &#x27;rxjs&#x27;;
+import {IShoppingModel} from &#x27;../../store/models/interfaces/IShopping.model&#x27;;
 import {Store} from &#x27;@ngrx/store&#x27;;
-import {decrement, increment, reset} from &#x27;../store/actions/counter.action&#x27;;
-
-
-/**
- * Counter Component
- */
+import {AppState} from &#x27;../../store/states/app-state.model&#x27;;
+import {AddItemAction, DeleteItemAction} from &#x27;../../store/actions/shopping.action&#x27;;
 
 @Component({
-  selector: &#x27;app-counter&#x27;,
-  templateUrl: &#x27;./counter.component.html&#x27;,
-  styleUrls: [&#x27;./counter.component.css&#x27;]
+  selector: &#x27;app-shopping-list&#x27;,
+  templateUrl: &#x27;./shopping-list.component.html&#x27;,
+  styleUrls: [&#x27;./shopping-list.component.css&#x27;]
 })
-export class CounterComponent implements OnInit {
-
-  count$: Observable&lt;number&gt;;
+export class ShoppingListComponent implements OnInit {
 
 
-  constructor(private store: Store&lt;{ count: number }&gt;) {
-    this.count$ &#x3D; store.select(&#x27;count&#x27;);
+  shoppingItem$: Observable&lt;Array&lt;IShoppingModel&gt;&gt;;
+  newShoppingItem: IShoppingModel &#x3D; {id: 0, name: &#x27;&#x27;};
+
+  constructor(private store: Store&lt;AppState&gt;) {
   }
 
-  /**
-   * @ignore
-   */
   ngOnInit(): void {
+    this.shoppingItem$ &#x3D; this.store.select(store &#x3D;&gt; store.shopping);
   }
 
-  /**
-   * Incrementing Counter value to the store
-   */
-  increment(): void {
-    this.store.dispatch(increment());
+  addItem($event): void {
+    $event.preventDefault();
+    this.newShoppingItem.id &#x3D; 123;
+    this.store.dispatch(new AddItemAction(this.newShoppingItem));
+    this.newShoppingItem &#x3D; {id: 0, name: &#x27;&#x27;};
   }
 
-  /**
-   * Decrement Counter Value to the store
-   */
-  decrement(): void {
-    this.store.dispatch(decrement());
+  deleteItem(id: number): void {
+    this.store.dispatch(new DeleteItemAction(id));
   }
 
-  /**
-   * Resetting Counter value to the store
-   */
-  reset(): void {
-    this.store.dispatch(reset());
-  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;button (click)&#x3D;&quot;increment()&quot;&gt;Increment&lt;/button&gt;
-&lt;h1&gt;Current Count : {{count$ | async}}&lt;/h1&gt;
-&lt;button (click)&#x3D;&quot;decrement()&quot;&gt;Decrement&lt;/button&gt;
-&lt;button (click)&#x3D;&quot;reset()&quot;&gt;Reset&lt;/button&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div id&#x3D;&quot;wrapper&quot;&gt;
+
+  &lt;div id&#x3D;&quot;shopping-list&quot;&gt;
+    &lt;div id&#x3D;&quot;list&quot;&gt;
+      &lt;h2&gt;Shopping List&lt;/h2&gt;
+
+      &lt;ul&gt;
+        &lt;li *ngFor&#x3D;&quot;let shopping of shoppingItem$ | async&quot; (click)&#x3D;&quot;deleteItem(shopping.id)&quot;&gt;
+          {{ shopping.name }}
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+
+    &lt;form (ngSubmit)&#x3D;&quot;addItem($event)&quot;&gt;
+      &lt;input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;newShoppingItem.name&quot; placeholder&#x3D;&quot;Item&quot; name&#x3D;&quot;name&quot;/&gt;
+      &lt;button type&#x3D;&quot;submit&quot;&gt;+&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./counter.component.css</code>
+                    <code>./shopping-list.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">
+#wrapper {
+  text-align: center;
+  color: white;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+#shopping-list {
+  box-shadow: 20px 20px 0px #222f3e;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+form &gt; input {
+  flex-grow: 1;
+  outline: none;
+  padding-left: 4px;
+  border: 0px;
+  height: 20px;
+}
+
+form &gt; button {
+  border: 0px;
+  background: #10ac84;
+  color: white;
+  outline: none;
+}
+
+form &gt; button:hover {
+  background: #006266;
+}
+
+ul {
+  list-style: none;
+  background: #1dd1a1;
+  padding: 10px 0px;
+  margin: 0px;
+}
+
+li {
+  padding-bottom: 4px;
+}
+
+h2 {
+  background: #10ac84;
+  padding: 10px 0px;
+  margin: 0px;
+}
+
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -486,10 +626,10 @@ export class CounterComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><button (click)="increment()">Increment</button><h1>Current Count : {{count$ | async}}</h1><button (click)="decrement()">Decrement</button><button (click)="reset()">Reset</button></div>'
+        var COMPONENT_TEMPLATE = '<div><div id="wrapper">  <div id="shopping-list">    <div id="list">      <h2>Shopping List</h2>      <ul>        <li *ngFor="let shopping of shoppingItem$ | async" (click)="deleteItem(shopping.id)">          {{ shopping.name }}        </li>      </ul>    </div>    <form (ngSubmit)="addItem($event)">      <input type="text" [(ngModel)]="newShoppingItem.name" placeholder="Item" name="name"/>      <button type="submit">+</button>    </form>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CounterComponent', 'selector': 'app-counter'},{'name': 'ShoppingListComponent', 'selector': 'app-shopping-list'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'CounterComponent'};
+    var ACTUAL_COMPONENT = {'name': 'ShoppingListComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -524,7 +664,7 @@ export class CounterComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'CounterComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ShoppingListComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

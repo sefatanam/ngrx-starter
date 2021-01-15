@@ -27,15 +27,18 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content component">
+               <div class="content injectable">
                    <div class="content-data">
 
 
 
 
+
+
+
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li>CounterComponent</li>
+  <li>Injectables</li>
+  <li>ApiService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -45,86 +48,21 @@
         <li >
             <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
         </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
-        </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/app/counter/counter.component.ts</code>
-</p>
-
-    <p class="comment">
-        <h3>Description</h3>
-    </p>
-    <p class="comment">
-        <p>Counter Component</p>
-
-    </p>
-
-
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
-    </p>
-
-
-<section>
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
-        <tbody>
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/services/interfaces/ApiService.ts</code>
+        </p>
 
 
 
 
-
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-counter</code></td>
-            </tr>
-
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./counter.component.css</code></td>
-            </tr>
-
-
-
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./counter.component.html</code></td>
-            </tr>
-
-
-
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-    <section>
+            <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -137,7 +75,12 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#count$">count$</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#endPoint">endPoint</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#httpClient">httpClient</a>
                             </li>
                         </ul>
                     </td>
@@ -152,13 +95,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#decrement">decrement</a>
+                                <a href="#add">add</a>
                             </li>
                             <li>
-                                <a href="#increment">increment</a>
+                                <a href="#delete">delete</a>
                             </li>
                             <li>
-                                <a href="#reset">reset</a>
+                                <a href="#getAll">getAll</a>
                             </li>
                         </ul>
                     </td>
@@ -172,18 +115,18 @@
     </table>
 </section>
 
-    <section>
+            <section>
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(store: Store<literal type>)</code>
+<code>constructor(httpClient: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, endPoint: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/counter/counter.component.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/services/interfaces/ApiService.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -201,10 +144,22 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>store</td>
+                                                        <td>httpClient</td>
                                                   
                                                         <td>
-                                                                    <code>Store&lt;literal type&gt;</code>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>endPoint</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -221,11 +176,7 @@
         </table>
 </section>
 
-
-
-
-
-    <section>
+            <section>
     
     <h3 id="methods">
         Methods
@@ -234,38 +185,63 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="decrement"></a>
+                    <a name="add"></a>
                     <span class="name">
                         <b>
-                            decrement
+                            add
                         </b>
-                        <a href="#decrement"><span class="icon ion-ios-link"></span></a>
+                        <a href="#add"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>decrement()</code>
+<code>add(T)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">src/app/counter/counter.component.ts:41</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/services/interfaces/ApiService.ts:20</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Decrement Counter Value to the store</p>
-</div>
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>T</td>
 
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;object&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -275,38 +251,67 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="increment"></a>
+                    <a name="delete"></a>
                     <span class="name">
                         <b>
-                            increment
+                            delete
                         </b>
-                        <a href="#increment"><span class="icon ion-ios-link"></span></a>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>increment()</code>
+<code>delete(id: number | string)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/app/counter/counter.component.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/services/interfaces/ApiService.ts:26</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Incrementing Counter value to the store</p>
-</div>
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                            <code>number | string</code>
+                                    </td>
 
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -316,37 +321,35 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="reset"></a>
+                    <a name="getAll"></a>
                     <span class="name">
                         <b>
-                            reset
+                            getAll
                         </b>
-                        <a href="#reset"><span class="icon ion-ios-link"></span></a>
+                        <a href="#getAll"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>reset()</code>
+<code>getAll()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/app/counter/counter.component.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/app/services/interfaces/ApiService.ts:14</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Resetting Counter value to the store</p>
-</div>
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>    <code>Observable&lt;Array&lt;T&gt;&gt;</code>
 
                     </div>
                 </td>
@@ -354,7 +357,7 @@
         </tbody>
     </table>
 </section>
-    <section>
+            <section>
     
         <h3 id="inputs">
             Properties
@@ -363,23 +366,52 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="count$"></a>
+                        <a name="endPoint"></a>
                         <span class="name">
                             <b>
-                            count$</b>
-                            <a href="#count$"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Public</span>
+                            endPoint</b>
+                            <a href="#endPoint"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Observable&lt;number&gt;</code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/counter/counter.component.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/services/interfaces/ApiService.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="httpClient"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            httpClient</b>
+                            <a href="#httpClient"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/services/interfaces/ApiService.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -388,113 +420,46 @@
         </table>
 </section>
 
-</div>
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {HttpClient} from &#x27;@angular/common/http&#x27;;
+import {Injectable} from &#x27;@angular/core&#x27;;
+import {delay} from &#x27;rxjs/operators&#x27;;
 import {Observable} from &#x27;rxjs&#x27;;
-import {Store} from &#x27;@ngrx/store&#x27;;
-import {decrement, increment, reset} from &#x27;../store/actions/counter.action&#x27;;
 
-
-/**
- * Counter Component
- */
-
-@Component({
-  selector: &#x27;app-counter&#x27;,
-  templateUrl: &#x27;./counter.component.html&#x27;,
-  styleUrls: [&#x27;./counter.component.css&#x27;]
+@Injectable({
+  providedIn: &#x27;root&#x27;
 })
-export class CounterComponent implements OnInit {
+export class ApiService&lt;T&gt; {
 
-  count$: Observable&lt;number&gt;;
-
-
-  constructor(private store: Store&lt;{ count: number }&gt;) {
-    this.count$ &#x3D; store.select(&#x27;count&#x27;);
+  constructor(public httpClient: HttpClient, public endPoint: string) {
   }
 
-  /**
-   * @ignore
-   */
-  ngOnInit(): void {
+  getAll(): Observable&lt;Array&lt;T&gt;&gt; {
+    return this.httpClient.get&lt;Array&lt;T&gt;&gt;(this.endPoint).pipe(
+      delay(5000)
+    );
   }
 
-  /**
-   * Incrementing Counter value to the store
-   */
-  increment(): void {
-    this.store.dispatch(increment());
+  add(T): Observable&lt;object&gt; {
+    return this.httpClient.post(this.endPoint, T).pipe(
+      delay(2000)
+    );
   }
 
-  /**
-   * Decrement Counter Value to the store
-   */
-  decrement(): void {
-    this.store.dispatch(decrement());
+  delete(id: number | string) {
+    return this.httpClient.delete(&#x60;this.endPoint/${id}&#x60;).pipe(
+      delay(2000)
+    );
   }
 
-  /**
-   * Resetting Counter value to the store
-   */
-  reset(): void {
-    this.store.dispatch(reset());
-  }
 }
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;button (click)&#x3D;&quot;increment()&quot;&gt;Increment&lt;/button&gt;
-&lt;h1&gt;Current Count : {{count$ | async}}&lt;/h1&gt;
-&lt;button (click)&#x3D;&quot;decrement()&quot;&gt;Decrement&lt;/button&gt;
-&lt;button (click)&#x3D;&quot;reset()&quot;&gt;Reset&lt;/button&gt;
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-styleData">
-                <p class="comment">
-                    <code>./counter.component.css</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
-        </div>
-    </div>
-
-    
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><button (click)="increment()">Increment</button><h1>Current Count : {{count$ | async}}</h1><button (click)="decrement()">Decrement</button><button (click)="reset()">Reset</button></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CounterComponent', 'selector': 'app-counter'},{'name': 'ShoppingListComponent', 'selector': 'app-shopping-list'}];
-    var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'CounterComponent'};
-</script>
-<script src="../js/tree.js"></script>
-
-
-
 
 
 
@@ -523,8 +488,8 @@ export class CounterComponent implements OnInit {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'CounterComponent.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ApiService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
