@@ -1,10 +1,21 @@
 import {IShoppingModel} from '../models/interfaces/IShopping.model';
 import {ShoppingAction, ShoppingActionType} from '../actions/shopping.action';
 
+
+/*
+ * initial value of shopping reducer
+ */
 const initialState: Array<IShoppingModel> = [{
   id: 0,
   name: 'Diet Coke',
 }];
+
+/**
+ * Shopping Reducer
+ * @param state
+ * @param action
+ * @constructor
+ */
 
 export function ShoppingReducer(state: Array<IShoppingModel> = initialState, action: ShoppingAction): IShoppingModel[] {
   switch (action.type) {
