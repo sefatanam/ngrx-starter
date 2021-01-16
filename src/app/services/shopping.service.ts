@@ -21,13 +21,17 @@ export class ShoppingService {
   constructor(private http: HttpClient) { }
 
   getShoppingItems() {
-    return of(DATA);
+    return this.http.get<Array<ShoppingItem>>(this.SHOPPING_URL)
+      .pipe(
+        delay(500)
+      )
   }
+
 
   addShoppingItem(shoppingItem: ShoppingItem) {
     return this.http.post(this.SHOPPING_URL, shoppingItem)
       .pipe(
-        delay(500)
+        delay(10)
       )
   }
 

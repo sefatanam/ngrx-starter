@@ -18,9 +18,6 @@ export enum ShoppingActionTypes {
 
 export class LoadShoppingAction implements Action {
   readonly type = ShoppingActionTypes.LOAD_SHOPPING
-  constructor(public payload: Array<ShoppingItem>) {}
-
-
 }
 export class LoadShoppingSuccessAction implements Action {
   readonly type = ShoppingActionTypes.LOAD_SHOPPING_SUCCESS

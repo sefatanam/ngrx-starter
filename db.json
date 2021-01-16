@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "json-server",
-      "author": "typical"
+      "author": "typicode"
     }
   ],
   "comments": [
@@ -14,7 +14,7 @@
     }
   ],
   "profile": {
-    "name": "typical"
+    "name": "typicode"
   },
   "shopping": [
     {
@@ -22,16 +22,12 @@
       "name": "Diet Coke"
     },
     {
-      "id": 0.15999179475999084,
-      "name": "Cock"
+      "id": 0.055361485333402655,
+      "name": "cas"
     },
     {
-      "id": 0.17375120348434164,
-      "name": "we\\"
-    },
-    {
-      "id": 0.08980463792084407,
-      "name": "da"
+      "id": 0.03902245670423291,
+      "name": "cas"
     }
   ]
 }

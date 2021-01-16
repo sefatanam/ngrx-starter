@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { ShoppingItem } from './store/models/interfaces/ShoppingItem';
 import { Store } from '@ngrx/store';
 import { AppState } from './store/states/AppState';
-import { AddItemAction, DeleteItemAction } from './store/actions/shopping.action';
+import {AddItemAction, DeleteItemAction, LoadShoppingAction} from './store/actions/shopping.action';
 import {ShoppingService} from './services/shopping.service';
 
 @Component({
@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
     this.loading$ = this.stores.select(store => store.shopping.loading);
     this.error$ = this.stores.select(store => store.shopping.error);
 
+    this.stores.dispatch(new LoadShoppingAction());
   }
 
   addItem($event): void {

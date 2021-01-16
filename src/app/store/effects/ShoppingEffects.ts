@@ -26,20 +26,19 @@ const DATA: ShoppingItem[] = [{
 @Injectable()
 export class ShoppingEffects {
 
-  // @Effect() loadShopping$ = this.actions$
-  //   .pipe(
-  //     ofType<LoadShoppingAction>(ShoppingActionTypes.LOAD_SHOPPING),
-  //     mergeMap(
-  //       () => this.shoppingService.getShoppingItems()
-  //         .pipe(
-  //           map(data => {
-  //             console.log(data)
-  //             return new LoadShoppingSuccessAction(DATA);
-  //           }),
-  //           catchError(error => of(new LoadShoppingFailureAction(error)))
-  //         )
-  //     ),
-  //   );
+  @Effect() loadShopping$ = this.actions$
+    .pipe(
+      ofType<LoadShoppingAction>(ShoppingActionTypes.LOAD_SHOPPING),
+      mergeMap(
+        () => this.shoppingService.getShoppingItems()
+          .pipe(
+            map(data => {
+              return new LoadShoppingSuccessAction(data);
+            }),
+            catchError(error => of(new LoadShoppingFailureAction(error)))
+          )
+      ),
+    );
 
   @Effect() addShoppingItem$ = this.actions$
     .pipe(
