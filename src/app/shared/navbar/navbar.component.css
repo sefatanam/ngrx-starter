@@ -1,0 +1,30 @@
+header {
+  background: #172553;
+  color: #F5F5F5;
+  display: flex;
+  justify-content: space-around;
+}
+
+header h2{
+  color: #F5F5F5;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header ul li a{
+  border: 1px solid #F5F5F5;
+  text-decoration: none;
+  color: #F5F5F5;
+  padding: 8px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: all 200ms;
+}
+
+header ul li a:hover{
+  background: #F5F5F5;
+  color: #172553;
+}

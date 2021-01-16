@@ -1,32 +1,4 @@
 
-#wrapper {
-  /*text-align: center;*/
-  color: white;
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 40%;
-}
-
-
-@media (max-width: 600px) {
-  #wrapper {
-    /*text-align: center;*/
-    color: white;
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-  }
-}
-
-h2 {
-  color: #172553;
-  padding: 10px 0;
-  margin: 0;
-}
 
 form {
   display: flex;
@@ -39,7 +11,7 @@ form > input {
   flex-grow: 1;
   outline: none;
   border: none;
-  height: 34px;
+  height: 40px;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   font-size: inherit;
