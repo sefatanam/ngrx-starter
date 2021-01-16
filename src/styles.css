@@ -20,13 +20,13 @@ h1,h2 {
 
 
 #wrapper {
-  /*text-align: center;*/
-  color: white;
+
+
   display: flex;
   height: calc(100vh - 70px);
   flex-direction: column;
-  /*justify-content: center;*/
-  margin: 0 40%;
+  align-items: center;
+  justify-content: center;
 }
 
 
