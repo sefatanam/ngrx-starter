@@ -13,6 +13,7 @@ import { ApiInterceptor } from './interceptors/api-interceptor.interceptor';
 import { EffectsModule } from '@ngrx/effects';
 import { ShoppingEffects } from './store/effects/ShoppingEffects';
 import { ShoppingService } from './services/shopping.service';
+import {ShoppingModule} from './shopping/shopping.module';
 
 @NgModule({
   declarations: [

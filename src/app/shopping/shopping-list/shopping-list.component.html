@@ -1,26 +1,32 @@
+
+
 <div id="wrapper">
-  <div [class.loading]="(loading$ | async)" id="shopping-list" *ngIf="!(error$ | async); else error">
+  <div *ngIf="!(error$ | async); else error">
     <div id="list">
       <h2>
         Shopping List
+        <span [class.loading]="!(loading$ | async)"> Refreshing...</span>
       </h2>
 
       <ul *ngIf="(shoppingItems$ | async); else noItems">
-        <li *ngFor="let shopping of shoppingItems$ | async" (click)="deleteItem(shopping.id)">
-          <span>{{ shopping.name }}</span>
+        <li *ngFor="let shopping of shoppingItems$ | async" >
+          <span>{{ shopping.name }}
+            <button (click)="deleteItem(shopping.id)" class="icon"> <span class="fa fa-trash" ></span></button>
+          </span>
         </li>
       </ul>
 
       <ng-template #noItems>
         <ul>
-          <li style="max-width:250px;margin:0 auto;">No items found. Are you sure there's <em>nothing</em> you want?</li>
+          <li style="max-width:250px;margin:0 auto;">No items found. Are you sure there's <em>nothing</em> you want?
+          </li>
         </ul>
       </ng-template>
     </div>
 
     <form (ngSubmit)="addItem($event)">
       <input type="text" [(ngModel)]="newShoppingItem.name" placeholder="Item" name="itemName"/>
-      <button type="submit" >+</button>
+      <button type="submit">+</button>
     </form>
   </div>
 </div>

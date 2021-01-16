@@ -24,7 +24,7 @@ export class ApiService<T> {
   }
 
   delete(id: number | string) {
-    return this.httpClient.delete(`this.endPoint/${id}`).pipe(
+    return this.httpClient.delete(`${this.endPoint}/${id}`).pipe(
       delay(2000)
     );
   }
