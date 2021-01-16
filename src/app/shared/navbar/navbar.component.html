@@ -1,11 +1,15 @@
 <header>
   <h2>NGRX-Starter</h2>
   <ul>
-    <li><a routerLink="shopping">Shopping</a></li>
-    <li><a routerLink="count">Count</a></li>
+    <li><a routerLink="shopping" routerLinkActive="active">Shopping</a></li>
+    <li><a routerLink="count" routerLinkActive="active">Count</a></li>
   </ul>
 </header>
 <section>
+  <ul>
+    <li><a routerLink="shopping" routerLinkActive="active2">Shopping</a></li>
+    <li><a routerLink="count" routerLinkActive="active2">Count</a></li>
+  </ul>
   <router-outlet></router-outlet>
   <app-footer></app-footer>
 </section>
