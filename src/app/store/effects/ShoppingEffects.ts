@@ -18,11 +18,6 @@ import {
 } from '../actions/shopping.action';
 import {ShoppingItem} from '../models/interfaces/ShoppingItem';
 
-const DATA: ShoppingItem[] = [{
-  'id': 0,
-  'name': 'Diet Coke'
-}];
-
 @Injectable()
 export class ShoppingEffects {
 
@@ -30,9 +25,9 @@ export class ShoppingEffects {
     .pipe(
       ofType<LoadShoppingAction>(ShoppingActionTypes.LOAD_SHOPPING),
       mergeMap(
-        () => this.shoppingService.getShoppingItems()
+        () => this.shoppingService.getAll()
           .pipe(
-            map(data => {
+            map((data: Array<ShoppingItem>) => {
               return new LoadShoppingSuccessAction(data);
             }),
             catchError(error => of(new LoadShoppingFailureAction(error)))
@@ -44,7 +39,7 @@ export class ShoppingEffects {
     .pipe(
       ofType<AddItemAction>(ShoppingActionTypes.ADD_ITEM),
       mergeMap(
-        (data) => this.shoppingService.addShoppingItem(data.payload)
+        (data) => this.shoppingService.add(data.payload)
           .pipe(
             map(() => new AddItemSuccessAction(data.payload)),
             catchError(error => of(new AddItemFailureAction(error)))
@@ -56,7 +51,7 @@ export class ShoppingEffects {
     .pipe(
       ofType<DeleteItemAction>(ShoppingActionTypes.DELETE_ITEM),
       mergeMap(
-        (data) => this.shoppingService.deleteShoppingItem(data.payload)
+        (data) => this.shoppingService.delete(data.payload)
           .pipe(
             map(() => new DeleteItemSuccessAction(data.payload)),
             catchError(error => of(new DeleteItemFailureAction(error)))

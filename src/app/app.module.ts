@@ -31,7 +31,7 @@ import { ShoppingService } from './services/shopping.service';
   ],
   providers: [
     ShoppingService,
-    // {provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

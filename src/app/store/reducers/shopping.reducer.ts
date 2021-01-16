@@ -1,11 +1,5 @@
-import {ShoppingItem} from '../models/interfaces/ShoppingItem';
 import {ShoppingAction, ShoppingActionTypes} from '../actions/shopping.action';
-
-export interface ShoppingState {
-  list: ShoppingItem[],
-  loading: boolean,
-  error: Error
-}
+import {ShoppingState} from '../states/app/ShoppingState';
 
 const initialState: ShoppingState = {
   list: [],
@@ -13,7 +7,7 @@ const initialState: ShoppingState = {
   error: undefined
 };
 
-export function ShoppingReducer(state: ShoppingState = initialState, action: ShoppingAction) {
+export function ShoppingReducer(state: ShoppingState = initialState, action: ShoppingAction): ShoppingState {
   switch (action.type) {
     case ShoppingActionTypes.LOAD_SHOPPING:
       return {
