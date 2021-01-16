@@ -1,7 +1,7 @@
-import {IShoppingModel} from '../../models/interfaces/IShopping.model';
+import {ShoppingItem} from '../../models/interfaces/ShoppingItem';
 
 export interface ShoppingState {
-  list: IShoppingModel[];
+  list: Array<ShoppingItem>;
   loading: boolean;
   error: Error | number;
 }

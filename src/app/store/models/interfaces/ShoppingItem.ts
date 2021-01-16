@@ -1,4 +1,4 @@
-export class IShoppingModel {
+export interface ShoppingItem {
   id: number;
   name: string;
 }

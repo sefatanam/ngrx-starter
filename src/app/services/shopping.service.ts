@@ -1,15 +1,15 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {ShoppingItem} from '../store/models/interfaces/ShoppingItem';
 import {ApiService} from './interfaces/ApiService';
-import {IShoppingModel} from '../store/models/interfaces/IShopping.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ShoppingService extends ApiService<IShoppingModel> {
+export class ShoppingService extends ApiService<ShoppingItem> {
 
-  constructor(public httpClient: HttpClient) {
-    super(httpClient,'shopping');
+  constructor(public http: HttpClient) {
+    super(http, 'shopping');
   }
 
 }
