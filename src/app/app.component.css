@@ -9,6 +9,8 @@
   margin: 0 40%;
 }
 
+
+
 @media(max-width: 600px) {
   #wrapper {
     /*text-align: center;*/
@@ -20,10 +22,11 @@
     margin: 0 auto;
   }
 }
-
-/*#shopping-list {*/
-/*  box-shadow: 20px 20px 0px #222f3e;*/
-/*}*/
+h2 {
+  color: #172553;
+  padding: 10px 0;
+  margin: 0;
+}
 
 form {
   display: flex;
@@ -68,14 +71,15 @@ ul li {
   color: #333;
   font-size: 23px;
   border: 2px solid #172553;
+  transition: all 100ms;
 }
 
-h2 {
-  color: #172553;
-  padding: 10px 0;
-  margin: 0;
-
+ul li:hover{
+  background: #172553;
+  color: #F5F5F5;
+  border: 2px solid #fff;
 }
+
 
 .loading {
  visibility: hidden;
