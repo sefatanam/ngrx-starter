@@ -78,3 +78,4 @@ header ul li a:hover {
 header ul li a:hover .counter{
   border: 1px solid #172553;
 }
+h2{cursor: pointer}

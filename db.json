@@ -18,12 +18,8 @@
   },
   "shopping": [
     {
-      "id": 0.14927408588235888,
+      "id": 1,
       "name": "Diet Coke"
-    },
-    {
-      "id": 49,
-      "name": "Burger"
     }
   ]
 }
