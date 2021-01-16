@@ -10,8 +10,7 @@
 }
 
 
-
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   #wrapper {
     /*text-align: center;*/
     color: white;
@@ -22,6 +21,7 @@
     margin: 0 auto;
   }
 }
+
 h2 {
   color: #172553;
   padding: 10px 0;
@@ -74,15 +74,28 @@ ul li {
   transition: all 100ms;
 }
 
-ul li:hover{
+ul li:hover {
   background: #172553;
   color: #F5F5F5;
   border: 2px solid #fff;
 }
 
-
-.loading {
- visibility: hidden;
-  background: #0c5593;
+.icon {
+  float: right;
+  display: none;
+  background: none;
+  border: none;
+  outline: none;
+  color: #F5F5F5;
+  font-size: 22px;
 }
 
+ul li:hover .icon{
+  display: block;
+  cursor: pointer;
+  z-index: 2;
+}
+.loading {
+  visibility: hidden;
+  background: #0c5593;
+}
