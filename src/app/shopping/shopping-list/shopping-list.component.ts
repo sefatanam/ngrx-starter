@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
-import {ShoppingItem} from '../../store/models/interfaces/ShoppingItem';
+import {ShoppingItem} from '../../core/store/models/interfaces/ShoppingItem';
 import {Store} from '@ngrx/store';
-import {AppState} from '../../store/states/AppState';
-import {AddItemAction, DeleteItemAction, LoadShoppingAction} from '../../store/actions/shopping.action';
+import {AppState} from '../../core/store/states/AppState';
+import {AddItemAction, DeleteItemAction, LoadShoppingAction} from '../../core/store/actions/shopping.action';
 
 @Component({
   selector: 'app-shopping-list',
