@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs';
+import {ShoppingItem} from '../../core/store/models/interfaces/ShoppingItem';
+import {Store} from '@ngrx/store';
+import {AppState} from '../../core/store/states/AppState';
+import {LoadShoppingAction} from '../../core/store/actions/shopping.action';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  shoppingItems$ : Observable<Array<ShoppingItem>>;
+  constructor(private stores : Store<AppState>) { }
 
   ngOnInit(): void {
+    this.shoppingItems$ = this.stores.select(store=>store.shopping.list);
+    this.stores.dispatch(new LoadShoppingAction());
   }
 
 }

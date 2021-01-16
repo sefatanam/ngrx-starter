@@ -29,7 +29,7 @@ export class ShoppingListComponent implements OnInit {
 
   addItem($event): void {
     $event.preventDefault();
-    this.newShoppingItem.id = Math.random() * 0.23;
+    this.newShoppingItem.id = Math.round(Math.random() * 100);
     this.stores.dispatch(new AddItemAction(this.newShoppingItem));
     this.newShoppingItem = {id: 0, name: ''};
   }

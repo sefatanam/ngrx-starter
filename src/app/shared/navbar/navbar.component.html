@@ -1,7 +1,7 @@
 <header>
   <h2>NGRX-Starter</h2>
   <ul>
-    <li><a routerLink="shopping" routerLinkActive="active">Shopping</a></li>
+    <li><a routerLink="shopping" routerLinkActive="active">Shopping <span class="counter">{{(shoppingItems$|async).length}}</span> </a></li>
     <li><a routerLink="count" routerLinkActive="active">Count</a></li>
   </ul>
 </header>

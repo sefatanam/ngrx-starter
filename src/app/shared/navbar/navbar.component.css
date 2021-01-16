@@ -13,6 +13,7 @@ header ul {
   list-style: none;
   display: flex;
   align-items: center;
+
 }
 
 section ul {
@@ -25,6 +26,7 @@ section ul {
 
 header ul li a {
   /*border: 1px solid #F5F5F5;*/
+  position: relative;
   text-decoration: none;
   color: #F5F5F5;
   padding: 8px;
@@ -61,4 +63,18 @@ header ul li a:hover {
 @media(max-width: 600px) {
   header ul{display: none}
   section ul{display: flex}
+}
+
+.counter{
+  border-radius: 50%;
+  border: 1px solid white;
+  font-weight: 600;
+  padding: 5px;
+  font-size: 0.7rem;
+  top: 0;
+  right: 0;
+
+}
+header ul li a:hover .counter{
+  border: 1px solid #172553;
 }
